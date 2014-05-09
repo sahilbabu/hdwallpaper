@@ -1,0 +1,89 @@
+.widget_sidebarlogin #loginform{padding:11px 11px 0 0;}
+.widget_sidebarlogin #loginform #user_login:hover, .widget_sidebarlogin #loginform #user_pass:hover { color:#000;}
+.widget_sidebarlogin #loginform #user_login:focus, .widget_sidebarlogin #loginform #user_pass:focus { background:#FFF; color:#000;}
+.widget_sidebarlogin #loginform .login-button{ margin-right:20px;}
+.widget_sidebarlogin #loginform p{padding-bottom:0;}
+
+.widget_sidebarlogin #loginform #wp-submit.button-primary, .widget_sidebarlogin .widget_sidebarlogin ul#sidebar-login-links li{
+	background-color: #FEBD21;
+	border:none;
+    width: 63px;
+	 color: #454545;
+    display: block;
+    font-size: 14px;
+    padding: 6px 0;
+	float:left;
+    text-align: center;
+}
+#reglost{ display:none;}
+.widget_sidebarlogin #loginform #wp-submit.button-primary:hover, .widget_sidebarlogin .widget_sidebarlogin ul#sidebar-login-links li:hover {
+	background: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#FFF),color-stop(100%,#f8f8f8));
+	background: -webkit-linear-gradient(top,#FFF 0,#f8f8f8 100%);
+	background: -moz-linear-gradient(top,#FFF 0,#f8f8f8 100%);
+	background: -o-linear-gradient(top,#FFF 0,#f8f8f8 100%);
+	background: -ms-linear-gradient(top,#FFF 0,#f8f8f8 100%);
+	background: linear-gradient(top,#FFF ,#f8f8f8 100%);
+}
+.widget_sidebarlogin #loginform #wp-submit.button-primary:active{top:2px;}
+
+.widget_sidebarlogin .avatar_container {
+	float: left;
+}
+ul#sidebar-login-links{
+	text-align: left;
+
+}
+ul#sidebar-login-links-left{
+	text-align: left;
+}
+ul#sidebar-login-links li, ul#sidebar-login-links-left li{
+	display: inline;
+	float:left; 
+	margin-top:10px;	
+	list-style-type: none;
+	text-align: left;
+	padding: 5px 5px 5px 0;
+	background: none;
+	border: none;
+}
+
+.widget_sidebarlogin  ul#sidebar-login-links li a{
+	text-decoration: none;
+}
+
+.sidebar-login-info{
+	width: 100%;
+	height: auto;
+	float: left;
+	display: block;
+}
+
+.widget_sidebarlogin .sidebar-login-info .widget-container p, .widget_sidebarlogin .sidebar-login-info  p{
+	text-align: left;
+	margin: 0 10px 10px 0;
+	line-height: 18px;
+}
+
+.widget_sidebarlogin p#reglost{
+	margin-top: 10px;
+}
+
+.widget_sidebarlogin p#reglost a{
+	margin-right: 5px;
+}
+
+.widget_sidebarlogin .sidebar-login-info .avatar_container img {
+	padding: 3px;
+	border: 5px solid #ddd;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	margin-right: 8px;
+	margin-top: 5px;
+	float: left;
+}
+
+.widget_sidebarlogin #message.error.fade p{
+	width: 100%;
+	box-shadow: 0px 0px 20px #FF0000;
+	text-align: center;
+}

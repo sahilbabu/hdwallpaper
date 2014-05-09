@@ -1,0 +1,243 @@
+#menu{
+	display: none;
+}
+@media (max-width:1018px) {
+
+.headerOuterLft {
+	min-width: 270px;
+	max-width:767px;
+	margin:0 10px !important;
+	width:auto;
+	position: relative;
+	text-align:center;
+	font-size:11px;
+}
+.welcome p{
+	font-size:11px;
+	padding:6px 10px 6px;
+}
+.wide{
+	width:auto;
+	margin-right:10px;
+	text-align:center;
+}
+
+.welcome,
+.lftBar,
+.rightBar,
+.categories,
+.by,
+.threed,
+.bannerOuter,
+.peginate{
+	margin:0px;
+	width: auto;
+	float:none !important;
+	clear:both;
+}
+.bannerOuter img{
+	width:100%;
+	height:auto;
+}
+.beautiful > ul  > li,
+.jPaginate{
+	width:100%;
+}
+.star{
+	clear:both;
+}
+.star ul li{
+	margin-bottom:6px;
+}
+.beautiful ul li img{
+	margin-bottom:0px;
+}
+.Resolutions,
+.hdwide,
+.resolation,
+.alfa,
+.filter,
+.topwallpaper,
+.beautiful,
+.recentpostOuter,
+.recentpost,
+.postbottom,
+.youCanLogin,
+.login,
+.addChoices,
+.addborder,
+.fbicon,
+.findus02,
+.socialIcone,
+.findus03,
+.sweetmessage,
+.news,
+.addborder02,
+.footerInner,
+.chrismis,
+.findus04,
+.findus,
+.newsIn,
+.headerOuterLft{
+	width: auto;
+	float: none !important;
+	clear:both;
+}
+.socialIcone a{
+	margin:0 9px;
+}
+.newsIn ul li{
+	margin:0 6px 10px;
+}
+.footerlogo,
+.fbicon{
+	float:none !important;
+	text-align:center;
+}
+.chrismisBox{
+	float:none !important;
+}
+.your,
+.display,
+.ratio{
+	width:100%;
+	float:none !important;
+}
+.ratioBottom,
+.googleBanner ,
+.footerMenu,
+.hdwide {
+	display:none;
+}
+.inputOuter{
+	position:absolute;
+	top:225px;
+	width:100%;
+	overflow:hidden;
+	left:0px;
+
+}
+.menuOuter{
+	background:#2AA3CE;
+	position:relative;
+}
+.menu ul li{
+	float:none;
+}
+
+#menu{
+	position:absolute;
+	right:20px;
+	top:170px;
+	display:block;
+  background-color: #ef037f;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+	cursor:pointer;
+    padding: 7px 10px 6px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;	k2
+}
+#menu .icon-bar {
+    background-color: #F5F5F5;
+    border-radius: 1px 1px 1px 1px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    display: block;
+    height: 2px;
+    width: 18px;
+}
+.logo{
+	margin-left:10px;
+}
+#menu .icon-bar + .icon-bar {
+    margin-top: 3px;
+}
+.menu ul li a{
+	display:block;
+	padding:1px 10px  !important;
+}
+.menu{
+	display:none;
+}
+.login {
+	
+	height:132px;
+}
+.addChoices img{
+	width:100%;
+}
+.username{
+	width:98%;
+}
+.rightBar,
+.lftBar  {
+	width:auto !important;
+	padding:0 10px;
+	float:none !important;
+	overflow: hidden;
+
+}
+.bodyArea{
+	overflow: hidden;
+}
+.chrismisBox{
+	margin-left:0px;
+}
+
+.lftBar{
+	padding-top:36px !important;
+}
+
+.input{
+	width:100%;
+	padding-left:0px;
+}
+.inputButton{
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+
+}
+
+@media (min-width: 1019px) and (max-width: 1099px) {
+.menu ul li a{
+	display:inline-block;
+	padding:0 7px !important;
+}	
+.your{
+	position:absolute;
+	right:0px;
+	top:58px;
+}
+.logoInner{
+	padding-top:32px;
+}
+.logo{
+	margin-left:10px;
+}	
+.googleBanner{
+	display:none;
+}
+.rightBar{
+	width:23.5%;
+}
+.lftBar{
+	width:76.5%;
+}
+.username{
+	width:72%;
+}
+.findus,
+.socialIcone,
+.sweetmessage,
+.news ,
+.newsIn,
+.addChoices{
+	width:100%;
+}
+.socialIcone a{
+	margin-right:10px;
+}	
+}

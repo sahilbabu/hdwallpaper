@@ -1,0 +1,103 @@
+.gallery dl.gallery-item {
+    float: left;
+}
+.clear {
+    clear: both;
+}
+
+/*
+ *  Added custom css for wordpress comments
+ */
+.comment-list-holder,
+.jpages-table-holder {
+    margin: 15px 0;
+}
+
+.comment-list-holder a,
+.jpages-table-holder a {
+    font-size: 12px;
+    cursor: pointer;
+    margin: 0 5px;
+    color: #333;
+}
+
+.comment-list-holder a:hover,
+.jpages-table-holder a:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+.comment-list-holder a.jp-previous,
+.jpages-table-holder a.jp-previous {
+    margin-right: 15px;
+}
+.comment-list-holder a.jp-next,
+.jpages-table-holder a.jp-next {
+    margin-left: 15px;
+}
+
+.comment-list-holder a.jp-current,
+.jpages-table-holder a.jp-current,
+a.jp-current:hover {
+    color: #FF4242;
+    font-weight: bold;
+}
+
+.comment-list-holder a.jp-disabled,
+.jpages-table-holder a.jp-disabled,
+a.jp-disabled:hover {
+    color: #bbb;
+}
+
+.comment-list-holder a.jp-current, a.jp-current:hover,
+.comment-list-holder a.jp-disabled, a.jp-disabled:hover {
+    cursor: default;
+    background: none;
+}
+
+.comment-list-holder span { margin: 0 5px; }
+
+.jpages-table-holder a.jp-current, a.jp-current:hover,
+.jpages-table-holder a.jp-disabled, a.jp-disabled:hover {
+    cursor: default;
+    background: none;
+}
+
+.jpages-table-holder span { margin: 0 5px; }
+
+
+.gallery-holder {
+    margin: 15px 0;
+}
+
+.gallery-holder a {
+    font-size: 12px;
+    cursor: pointer;
+    margin: 0 5px;
+    color: #333;
+}
+
+.gallery-holder a:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+.gallery-holder a.jp-previous { margin-right: 15px; }
+.gallery-holder a.jp-next { margin-left: 15px; }
+
+.gallery-holder a.jp-current, a.jp-current:hover {
+    color: #FF4242;
+    font-weight: bold;
+}
+
+.gallery-holder a.jp-disabled, a.jp-disabled:hover {
+    color: #bbb;
+}
+
+.gallery-holder a.jp-current, a.jp-current:hover,
+.gallery-holder a.jp-disabled, a.jp-disabled:hover {
+    cursor: default;
+    background: none;
+}
+
+.gallery-holder span { margin: 0 5px; }
