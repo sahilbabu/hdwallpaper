@@ -2,7 +2,7 @@
  *  Script: chld-thm-cfg.js
  *  Plugin URI: http://www.lilaeamedia.com/plugins/child-theme-configurator/
  *  Description: Handles jQuery, AJAX and other UI
- *  Version: 1.3.1
+ *  Version: 1.4.1
  *  Author: Lilaea Media
  *  Author URI: http://www.lilaeamedia.com/
  *  License: GPLv2
@@ -72,6 +72,7 @@ jQuery(document).ready(function($){
                 $('#'+important).prop('checked', false);
                 return;
             }*/
+            if ('' != value) {
             // handle specific inputs
             if (false === ctc_is_empty(rulepart)) {
                 switch(rulepart) {
@@ -128,6 +129,7 @@ jQuery(document).ready(function($){
                 } else {
                     cssrules[inputtheme][inputrule] = value;
                 }
+            }
             }
         });
         // update swatch
@@ -189,7 +191,7 @@ jQuery(document).ready(function($){
         });
     },
     ctc_image_url = function(theme, value) {
-        var parts = value.toString().match(/url\([" ]*(.+?)[" ]*\)/),
+        var parts = value.toString().match(/url\(['" ]*(.+?)['" ]*\)/),
             path = ctc_is_empty(parts) ? null : parts[1],
             url = ctcAjax.theme_uri + '/' + ('parent' == theme ? ctcAjax.parnt : ctcAjax.child) + '/',
             image_url;

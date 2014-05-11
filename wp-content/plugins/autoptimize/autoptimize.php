@@ -3,7 +3,7 @@
 Plugin Name: Autoptimize
 Plugin URI: http://blog.futtta.be/autoptimize
 Description: Optimizes your website, concatenating the CSS and JavaScript code, and compressing it.
-Version: 1.8.1
+Version: 1.8.4
 Author: Frank Goossens (futtta)
 Author URI: http://blog.futtta.be/
 Domain Path: localization/
@@ -34,7 +34,7 @@ $conf = autoptimizeConfig::instance();
 /* Check if we're updating, in which case we might need to do stuff and flush the cache
 to avoid old versions of aggregated files lingering around */
 
-$autoptimize_version="1.8.1";
+$autoptimize_version="1.8.4";
 $autoptimize_db_version=get_option('autoptimize_version','none');
 
 if ($autoptimize_db_version !== $autoptimize_version) {
@@ -133,6 +133,13 @@ function autoptimize_start_buffering() {
 	// filter you can use to block autoptimization on your own terms
 	$ao_noptimize = (bool) apply_filters( 'autoptimize_filter_noptimize', $ao_noptimize );
 
+	// noptimize in qs to get non-optimized page for debugging
+	if (array_key_exists("ao_noptimize",$_GET)) {
+		if ($_GET["ao_noptimize"]==="1") {
+			$ao_noptimize = true;
+		}
+	}
+
 	if (!is_feed() && !$ao_noptimize ) {
 
 	// Config element
@@ -184,7 +191,7 @@ function autoptimize_start_buffering() {
 	}
 }
 
-//Action on end - 
+// Action on end, this is where the magic happens
 function autoptimize_end_buffering($content) {
 	if ( stripos($content,"<html") === false || stripos($content,"<xsl:stylesheet") !== false ) { return $content;}
 

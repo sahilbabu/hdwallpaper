@@ -148,7 +148,7 @@
                 <div class="headerInner clearfix">
                     <div class="headerOuterLft fLeft clearfix">
                         <div class="welcome fLeft">
-                            <p>Welcome to HD Wallpapersinn.com</p>
+                            <p>Welcome To WallRGB.Com</p>
                         </div>
 
                         <div class="inputOuter fRight clearfix">

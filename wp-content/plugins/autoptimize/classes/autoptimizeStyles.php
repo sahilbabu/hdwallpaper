@@ -35,7 +35,7 @@ class autoptimizeStyles extends autoptimizeBase {
 		// get cdn url
 		$this->cdn_url = $options['cdn_url'];
 		
-		//Store data: URIs setting for later use
+		// Store data: URIs setting for later use
 		$this->datauris = $options['datauris'];
 		
 		// noptimize me
@@ -55,6 +55,9 @@ class autoptimizeStyles extends autoptimizeBase {
 
 		// Save IE hacks
 		$this->content = $this->hide_iehacks($this->content);
+
+		// hide comments
+		$this->content = $this->hide_comments($this->content);
 		
 		// Get <style> and <link>
 		if(preg_match_all('#(<style[^>]*>.*</style>)|(<link[^>]*stylesheet[^>]*>)#Usmi',$this->content,$matches)) {
@@ -87,8 +90,13 @@ class autoptimizeStyles extends autoptimizeBase {
 							$tag = '';
 						}
 					} else {
-						//<style>
+						// inline css in style tags can be wrapped in comment tags, so restore comments
+						$tag = $this->restore_comments($tag);
 						preg_match('#<style.*>(.*)</style>#Usmi',$tag,$code);
+
+						// and re-hide them to be able to to the removal based on tag
+						$tag = $this->hide_comments($tag);
+
 						$code = preg_replace('#^.*<!\[CDATA\[(?:\s*\*/)?(.*)(?://|/\*)\s*?\]\]>.*$#sm','$1',$code[1]);
 						$this->css[] = array($media,'INLINE;'.$code);
 					}
@@ -158,7 +166,7 @@ class autoptimizeStyles extends autoptimizeBase {
 
 			while(preg_match_all('#^(/*\s?)@import.*(?:;|$)#Um',$thiscss,$matches))	{
 				foreach($matches[0] as $import)	{
-					$url = trim(preg_replace('#^.*((?:https?|ftp)://.*\.css).*$#','$1',$import)," \t\n\r\0\x0B\"'");
+					$url = trim(preg_replace('#^.*((?:https?|ftp)://.*\.css).*$#','$1',trim($import))," \t\n\r\0\x0B\"'");
 					$path = $this->getpath($url);
 					$import_ok = false;
 					if (file_exists($path) && is_readable($path)) {
@@ -270,11 +278,14 @@ class autoptimizeStyles extends autoptimizeBase {
 			
 			//Minify
 			if (class_exists('Minify_CSS_Compressor')) {
-				// legacy
 				$tmp_code = trim(Minify_CSS_Compressor::process($code));
 			} else if(class_exists('CSSmin')) {
 				$cssmin = new CSSmin();
-				$tmp_code = trim($cssmin->run($code));
+				if (method_exists($cssmin,"run")) {
+					$tmp_code = trim($cssmin->run($code));
+				} elseif (@is_callable(array($cssmin,"minify"))) {
+					$tmp_code = trim(CssMin::minify($code));
+				}
 			}
 			
 			if (!empty($tmp_code)) {
@@ -322,8 +333,11 @@ class autoptimizeStyles extends autoptimizeBase {
 	
 	//Returns the content
 	public function getcontent() {
-		//Restore IE hacks
+		// restore IE hacks
 		$this->content = $this->restore_iehacks($this->content);
+
+		// restore comments
+		$this->content = $this->restore_comments($this->content);
 		
 		// restore noscript
 		if ( strpos( $this->content, '%%NOSCRIPT%%' ) !== false ) { 
@@ -351,8 +365,8 @@ class autoptimizeStyles extends autoptimizeBase {
 		//Add the new stylesheets
 		if ($this->inline == true) {
 			foreach($this->csscode as $media => $code) {
-				if (strpos($this->content,"<title>")!==false) {
-					$this->content = str_replace('<title>','<style type="text/css" media="'.$media.'">'.$code.'</style><title>',$this->content);
+				if (strpos($this->content,"<title")!==false) {
+					$this->content = str_replace('<title','<style type="text/css" media="'.$media.'">'.$code.'</style><title',$this->content);
 				} else {
 					$warn_html_template=true;
 					$this->content .= '<style type="text/css" media="'.$media.'">'.$code.'</style>';
@@ -361,6 +375,7 @@ class autoptimizeStyles extends autoptimizeBase {
 		} else {
 			if($this->defer == true) {
 				$deferredCssBlock = "<script>function lCss(url,media) {var d=document;var l=d.createElement('link');l.rel='stylesheet';l.type='text/css';l.href=url;l.media=media; d.getElementsByTagName('head')[0].appendChild(l);}function deferredCSS() {";
+				$noScriptCssBlock = "<noscript>";
 			}
 
 			foreach($this->url as $media => $url) {
@@ -369,9 +384,10 @@ class autoptimizeStyles extends autoptimizeBase {
 				//Add the stylesheet either deferred (import at bottom) or normal links in head
 				if($this->defer == true) {
 					$deferredCssBlock .= "lCss('".$url."','".$media."');";
+					$noScriptCssBlock .= '<link type="text/css" media="'.$media.'" href="'.$url.'" rel="stylesheet" />';
 				} else {
-					if (strpos($this->content,"<title>")!==false) {
-						$this->content = str_replace('<title>','<link type="text/css" media="'.$media.'" href="'.$url.'" rel="stylesheet" /><title>',$this->content);
+					if (strpos($this->content,"<title")!==false) {
+						$this->content = str_replace('<title','<link type="text/css" media="'.$media.'" href="'.$url.'" rel="stylesheet" /><title',$this->content);
 					} else {
 						$warn_html_template=true;
 						$this->content .= '<link type="text/css" media="'.$media.'" href="'.$url.'" rel="stylesheet" />';
@@ -381,6 +397,13 @@ class autoptimizeStyles extends autoptimizeBase {
 			
 			if($this->defer == true) {
 				$deferredCssBlock .= "}if(window.addEventListener){window.addEventListener('DOMContentLoaded',deferredCSS,false);}else{window.onload = deferredCSS;}</script>";
+				$noScriptCssBlock .= "</noscript>";
+				if (strpos($this->content,"<title")!==false) {
+						$this->content = str_replace('<title',$noScriptCssBlock.'<title',$this->content);
+				} else {
+						$warn_html_template=true;
+						$this->content .= $noScriptCssBlock;
+				}
 				if (strpos($this->content,"</body>")!==false) {
 					$this->content = str_replace('</body>',$deferredCssBlock.'</body>',$this->content);
 				} else {

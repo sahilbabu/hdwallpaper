@@ -56,8 +56,8 @@ get_header();
         </div>
 		</div>
 		<div class="boxer">
-			<h2>2014 Porche Boxer by TechArt 2 Wallpapers</h2>
-			<p>HD Wallpapers Inn Provides Best PC, Desktop and High Definition Wallpapers. We Upload a Great Collection Of HD Wallpapers 1080p Everyday in High Resolutions.</p>
+			<h2>Full HD Wallpapers, Free HD Desktop Wallpapers for All Resolution</h2>
+			<p>Wall RGB Provides Best PC, Desktop and High Definition Wallpapers. We Upload a Great Collection Of HD Wallpapers 1080p Everyday in High Resolutions.</p>
 		</div>
 		<?php
 

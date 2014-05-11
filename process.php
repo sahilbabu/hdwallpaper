@@ -4,8 +4,8 @@ include_once("wp-includes/fb/facebook.php"); //include facebook api library
 ######### edit details ##########
 $appId = '1459918874245839'; //Facebook App ID
 $appSecret = 'a3505bbff947e3beaabb73c9ff4dcc04'; // Facebook App Secret
-$return_url = 'http://wallrgb.com/hd_wallpaper/hdwallpaper/process.php';  //return url (url to script)
-$homeurl = 'http://wallrgb.com/hd_wallpaper/hdwallpaper/';  //return to home
+$return_url = 'http://wallrgb.com/process.php';  //return url (url to script)
+$homeurl = 'http://wallrgb.com/';  //return to home
 $fbPermissions = 'publish_stream,user_photos';  //Required facebook permissions
 ##################################
 

@@ -38,7 +38,7 @@ get_header(); ?>
 								  $fb_profile = realpath(str_replace(get_bloginfo('url'), '.', $fb_profile[0]));
 								?>
                                 
-                                <!--<a href="<?php echo $large_image_url[0];?>&w=569&h=303"><button>Download <?php the_title(); ?></button></a>-->
+                                <!--<a href="<?php echo $large_image_url[0];?>&w=569&h=303"><button> <?php the_title(); ?></button></a>-->
                                 <a href="<?php echo site_url('/');?>download.php?download_file=<?php print urlencode($large_image_url[0]);?>&w=800&h=600"><button>Download <?php the_title(); ?></button></a>
                        
                                 	<form id="download_photo" name="download_photo" method="post" enctype="multipart/form-data">
@@ -156,7 +156,7 @@ get_header(); ?>
                                 </div>
                           
                           		<div class="recentpost clearfix">
-                                	<div class="recentpost-product"><a href="#">Related wallpaper</a></div>
+                                	<div class="recentpost-product"><a href="#">Related Wallpapers</a></div>
                                 	
                                   
                                 </div>

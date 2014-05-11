@@ -3,12 +3,14 @@ Contributors: rashed.latif
 Tags: sidebar, login, login form, sidebar widget, meta, form, register
 Donate link: http://www.knowhowto.com.au/donate
 Requires at least: 3.0
-Tested up to: 3.7.1
-Stable tag: 1.0.2
+Tested up to: 3.8.1
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
+
+*I Appreciate if you please give reviews and any suggestions after using this plugin.*
 
 TT Sidebar Login is a widget plugin developed by Rashed Latif. There are many similar plugins available that Can be used for logging into Wordpress sites. This plugin can be downloaded [here]. It is styled to fit into different themes but still there could be some problem in styling depending on the themes which can be fixed by anyone who knows CSS and HTML. Version 1.0 includes
 
@@ -37,3 +39,14 @@ Author will not provide any support for this plugin.  Other developers can use t
 1. The widget when logged in
 2. Widget settings
 3. The widget when logged out
+
+== Changelog ==
+
+= 1.0.3 =
+* Dashboard and Profile URL changed to work in subdirectories
+* Added an option to enable or disable displaying Post Counts
+
+== Upgrade Notice ==
+
+= 1.0.3 =
+This version enables the plugin to be used in subdirectory without any problem and also added an option to enable or disable displaying Post Counts.

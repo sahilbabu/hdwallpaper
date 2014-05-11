@@ -50,8 +50,11 @@ class autoptimizeScripts extends autoptimizeBase
 		// noptimize me
 		$this->content = $this->hide_noptimize($this->content);
 
-		//Save IE hacks
+		// Save IE hacks
 		$this->content = $this->hide_iehacks($this->content);
+
+		// comments
+		$this->content = $this->hide_comments($this->content);
 
 		//Get script files
 		if(preg_match_all('#<script.*</script>#Usmi',$this->content,$matches)) {
@@ -94,7 +97,9 @@ class autoptimizeScripts extends autoptimizeBase
 						}
 					}
 				} else {
-					//Inline script
+					// Inline script
+					// unhide comments, as javascript may be wrapped in comment-tags for old times' sake
+					$tag = $this->restore_comments($tag);
 					if($this->ismergeable($tag)) {
 						preg_match('#<script.*>(.*)</script>#Usmi',$tag,$code);
 						$code = preg_replace('#.*<!\[CDATA\[(?:\s*\*/)?(.*)(?://|/\*)\s*?\]\]>.*#sm','$1',$code[1]);
@@ -113,6 +118,8 @@ class autoptimizeScripts extends autoptimizeBase
 							$tag = '';
 						}
 					}
+					// re-hide comments to be able to do the removal based on tag from $this->content
+					$tag = $this->hide_comments($tag);
 				}
 				
 				//Remove the original script tag
@@ -152,7 +159,7 @@ class autoptimizeScripts extends autoptimizeBase
 				}*/
 			}
 		}
-		
+
 		//Check for already-minified code
 		$this->md5hash = md5($this->jscode);
 		$ccheck = new autoptimizeCache($this->md5hash,'js');
@@ -164,12 +171,16 @@ class autoptimizeScripts extends autoptimizeBase
 		
 		//$this->jscode has all the uncompressed code now. 
 		if(class_exists('JSMin')) {
-			$tmp_jscode = trim(JSMin::minify($this->jscode));
-			if (!empty($tmp_jscode)) {
-				$this->jscode = $tmp_jscode;
-				unset($tmp_jscode);
+			if (@is_callable(array(new JSMin,"minify"))) {
+				$tmp_jscode = trim(JSMin::minify($this->jscode));
+				if (!empty($tmp_jscode)) {
+					$this->jscode = $tmp_jscode;
+					unset($tmp_jscode);
 				}
-			return true;
+				return true;
+			} else {
+				return false;
+			}
 		} else {
 			return false;
 		}
@@ -216,6 +227,9 @@ class autoptimizeScripts extends autoptimizeBase
 			$this->content .= $bodyreplacement;
 			$this->warn_html();
 		}
+
+		// restore comments
+		$this->content = $this->restore_comments($this->content);
 
 		// Restore IE hacks
 		$this->content = $this->restore_iehacks($this->content);

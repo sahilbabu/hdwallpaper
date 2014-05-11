@@ -1,44 +1,101 @@
-# Copyright (C) 2012 Child Themify
+# Copyright (C) 2014 Child Themify
 # This file is distributed under the same license as the Child Themify package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Child Themify 0.1-alpha\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tag/child-themify\n"
-"POT-Creation-Date: 2012-12-31 17:13:34+00:00\n"
+"Project-Id-Version: Child Themify 1.0.3\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/child-themify\n"
+"POT-Creation-Date: 2014-04-15 15:22:30+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2012-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: child-themify.php:21
+#: includes/legacy.php:13 includes/plugin.php:14
 msgid "You do not have permission to do that!"
 msgstr ""
 
-#: child-themify.php:47
+#: includes/legacy.php:39 includes/plugin.php:70
 msgctxt "The placeholder is for a theme's name"
 msgid "Create a child theme from %s"
 msgstr ""
 
-#: child-themify.php:49
+#: includes/legacy.php:42 includes/plugin.php:73
 msgid "Name your child theme"
 msgstr ""
 
-#: child-themify.php:51
+#: includes/legacy.php:44 includes/plugin.php:75
 msgid "Let's go!"
 msgstr ""
 
-#: child-themify.php:111 child-themify.php:171
+#: includes/legacy.php:106 includes/legacy.php:169 includes/plugin.php:153
+#: includes/plugin.php:305
 msgid "Create a child theme"
 msgstr ""
 
-#: child-themify.php:128
+#: includes/legacy.php:125 includes/plugin.php:173
 msgid "Could not access the filesystem!"
 msgstr ""
 
-#: child-themify.php:149
+#: includes/legacy.php:146 includes/plugin.php:194
 msgid "Your child theme was created successfully."
+msgstr ""
+
+#: includes/plugin.php:237
+msgid "Show previous theme"
+msgstr ""
+
+#: includes/plugin.php:238
+msgid "Show next theme"
+msgstr ""
+
+#: includes/plugin.php:239
+msgid "Close overlay"
+msgstr ""
+
+#: includes/plugin.php:254
+msgid "Current Theme"
+msgstr ""
+
+#: includes/plugin.php:256
+msgid "Version: %s"
+msgstr ""
+
+#: includes/plugin.php:257
+msgid "By %s"
+msgstr ""
+
+#: includes/plugin.php:261
+msgid "Update Available"
+msgstr ""
+
+#: includes/plugin.php:268
+msgid "This is a child theme of %s."
+msgstr ""
+
+#: includes/plugin.php:272
+msgid "Tags:"
+msgstr ""
+
+#: includes/plugin.php:279
+msgid "Customize"
+msgstr ""
+
+#: includes/plugin.php:285
+msgid "Activate"
+msgstr ""
+
+#: includes/plugin.php:287
+msgid "Live Preview"
+msgstr ""
+
+#: includes/plugin.php:288
+msgid "Preview"
+msgstr ""
+
+#: includes/plugin.php:293
+msgid "Delete"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
@@ -50,9 +107,7 @@ msgid "https://github.com/johnpbloch/child-themify"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid ""
-"Enables the quick creation of child themes from any non-child theme you have "
-"installed."
+msgid "Create child themes at the click of a button."
 msgstr ""
 
 #. Author of the plugin/theme
