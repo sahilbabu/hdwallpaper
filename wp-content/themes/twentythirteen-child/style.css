@@ -122,7 +122,7 @@ em {
 }
 @font-face {
     font-family: 'bebasregular';
-    src: url('../fonts/bebas___-webfont.woff') format('woff'),  url('../fonts/bebas___-webfont.ttf') format('truetype');
+    src: url('fonts/bebas___-webfont.woff') format('woff'),  url('fonts/bebas___-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

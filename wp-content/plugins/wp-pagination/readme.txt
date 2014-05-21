@@ -3,8 +3,8 @@ Contributors: kishores
 Donate link: http://blog.kishorechandra.co.in/
 Tags: comments, gallery, pagination, jpages, jquery pagination
 Requires at least: 3.0.1
-Tested up to: 3.8
-Stable tag: 1.4
+Tested up to: 3.9.1
+Stable tag: 1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,6 +54,9 @@ This very simple like other wordpress plugin:
 Please make sure there should be a class called "gallery" wrapping the
 Gallery section.
 
+In Settings >> Media
+    We have a option for choosing images per page in Gallery. It's default five.
+
 = Comments pagination is not working? =
 
 Just add the ID "comment-list"
@@ -67,6 +70,9 @@ BUT DO NOT CHECK THE CHECK BOX FOR Break Comments into page CHECK BOX.
 
 
 == Changelog ==
+
+= 1.5 =
+* Added option to choose images per page in Gallery
 
 = 1.4 =
 * Fixed bug in chrome for gallery
@@ -89,6 +95,9 @@ BUT DO NOT CHECK THE CHECK BOX FOR Break Comments into page CHECK BOX.
 * Included the jpages js for gallery only.
 
 == Upgrade Notice ==
+
+= 1.5 =
+* Added option to choose images per page in Gallery
 
 = 1.4 =
 * Fixed bug in chrome for gallery

@@ -19,7 +19,7 @@
 .social_icons_widget .behance { background-image:url('../icons/small/behance.jpg'); }
 .social_icons_widget .dribbble { background-image:url('../icons/small/dribbble.jpg'); }
 .social_icons_widget .email { background-image:url('../icons/small/email.jpg'); }
-.social_icons_widget .facebook { background-image:url('../icons/small/facebook.png'); }
+.social_icons_widget .facebook { background-image:url('../icons/small/facebook.jpg'); }
 .social_icons_widget .flickr { background-image:url('../icons/small/flickr.jpg'); }
 .social_icons_widget .forrst { background-image:url('../icons/small/forrst.jpg'); }
 .social_icons_widget .foursquare { background-image:url('../icons/small/foursquare.jpg'); }
@@ -50,6 +50,7 @@
 
 .widget .widget-inside .icon_options,
 .widget .widget-inside .label_options {
+	margin:0;
 	padding:0 1.5%;
 	width:47%;
 }
@@ -60,7 +61,10 @@
 .social_icons_widget .social_accounts {
 	border-top:1px #ccc solid;
 	clear:both;
-	padding-top:15px;
+	float:left;
+	margin-top:1.5em;
+	padding-top:1.5em;
+	width:100%;
 }
 
 .social_icons_widget .social_accounts li {

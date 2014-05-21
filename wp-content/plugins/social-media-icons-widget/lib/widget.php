@@ -37,7 +37,8 @@ $ul_class .= 'icons-'.$icons;
 			$icon_path = STYLESHEETPATH .'/social_icons/'.$size.'/'.$id.'.{gif,jpg,jpeg,png}';
 		}
 		else {
-			$icon_path = ABSPATH .'wp-content/plugins/social-media-icons-widget/icons/'.$icons.'/'.$id.'.{gif,jpg,jpeg,png}';			
+			$siw_abs_path = str_replace('lib/', '', plugin_dir_path( __FILE__ ));
+			$icon_path =  $siw_abs_path . 'icons/'.$icons.'/'.$id.'.{gif,jpg,jpeg,png}';			
 		}
 		
 		$result = glob( $icon_path, GLOB_BRACE );
@@ -49,11 +50,11 @@ $ul_class .= 'icons-'.$icons;
 			}
 			else {
 				$path = explode('plugins', $result[0]);
-				$icon = get_bloginfo('url').'/wp-content/plugins'.$path[1];
+				$icon = plugins_url().''.$path[1];
 			}
 		}
 		elseif( $labels != 'show' && $icons != 'small' ) {
-			$icon = get_bloginfo('url').'/wp-content/plugins/social-media-icons-widget/icons/'.$icons.'/_unknown.jpg';
+			$icon = plugins_url().'/social-media-icons-widget/icons/'.$icons.'/_unknown.jpg';
 		}
 		else {
 			$icon = '';

@@ -36,13 +36,14 @@ get_header(); ?>
 								  $fb_cover = realpath(str_replace(get_bloginfo('url'), '.', $fb_cover[0]));
 								  $fb_profile = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '230x230-thumb');
 								  $fb_profile = realpath(str_replace(get_bloginfo('url'), '.', $fb_profile[0]));
+								  $tw = realpath(str_replace(get_bloginfo('url'), '.', $large_image_url[0]));
 								?>
                                 
-                                <!--<a href="<?php echo $large_image_url[0];?>&w=569&h=303"><button> <?php the_title(); ?></button></a>-->
+                                <!--<a href="<?php echo $large_image_url[0];?>&w=569&h=303"><button>Download <?php the_title(); ?></button></a>-->
                                 <a href="<?php echo site_url('/');?>download.php?download_file=<?php print urlencode($large_image_url[0]);?>&w=800&h=600"><button>Download <?php the_title(); ?></button></a>
                        
                                 	<form id="download_photo" name="download_photo" method="post" enctype="multipart/form-data">
-                                    <input type="hidden" title="hidden" name="download_photo_url" id="download_photo_url" />
+                                            <input type="hidden" title="hidden" name="download_photo_url" id="download_photo_url" value="<?php print $tw; ?>" />
                                     </form>
                                 </div>
                                 <div class="extra-links">
@@ -156,7 +157,7 @@ get_header(); ?>
                                 </div>
                           
                           		<div class="recentpost clearfix">
-                                	<div class="recentpost-product"><a href="#">Related Wallpapers</a></div>
+                                	<div class="recentpost-product"><a href="#">Related wallpaper</a></div>
                                 	
                                   
                                 </div>

@@ -29,8 +29,8 @@ $category_id = get_query_var('cat');
 <?php
 		}
 ?>
-<div class="alfa">
-	<ul>
+<div class="alfa" >
+	<ul class="category_left_list">
 	<?php
     $args = array(
         'type'                     => 'post',
@@ -80,7 +80,7 @@ $category_id = get_query_var('cat');
             }
         }?>
            
-                <p><a href="<?php echo site_url($categor->slug);?>"><?php echo $categor->name;?></a></p>
+                <p><a href="<?php echo get_category_link($categor->term_id);?>"><?php echo $categor->name;?></a></p>
             </li>
         <?php
 		}
@@ -98,18 +98,18 @@ $category_id = get_query_var('cat');
  </div>
  
  <div class=" resolation clearfix">
- <div class="resolationbutton fLeft">
+ <div class="resolationbutton active fLeft">
     <a href="javascript:void(0);">Aspect Ratio</a>
    
     </div>
-    <div class="resolationbutton2 active fLeft">
+    <div class="resolationbutton2 fLeft">
     <a href="javascript:void(0);">Resolution</a>
    
     </div>
  </div>
-<div id="aspact_ration_l" style="display:none;">
+<div id="resulotion_l" style="display:none;">
 <div class="Resolutions">
-    <h4>Aspect Ratio</h4>
+    <h4>Resolutions</h4>
  </div>
 
 <div class="hdwide" id="hdwide">
@@ -183,10 +183,12 @@ $terms_p = get_terms("resolution",$args);
 
 </div>
 </div>
-<div id="resulotion_l">
+
+<div id="aspact_ration_l">
 <div class="Resolutions">
-    <h4>Resolutions</h4>
+    <h4>Aspect Ratio</h4>
  </div>
+
 
 <div class="hdwide" id="hdwide2">
 <ul>
@@ -226,7 +228,7 @@ $terms_p = get_terms("resolution",$args);
                 <li>
                 <img width="40" height="27" alt="" id="box_<?php echo $term_id?>" src="<?php echo get_template_directory_uri(); ?>-child/images/arrow.jpg"> 
                     <p><a href="<?php echo $term_p_link; ?>"><?php echo $term_p->name; ?></a></p>
-                </li>
+                
 				<?php
 			 
 		    $term_id = $term_p->term_id;
@@ -234,7 +236,7 @@ $terms_p = get_terms("resolution",$args);
 			$termchildren = get_term_children( $term_id, $taxonomy_name );
 			if(!empty($termchildren))
 			{
-				echo "<ul class='children' style='display:none' id='ul_box_".$term_id."'>";
+				echo "<ul style='display:none' class='children' id='ul_box_".$term_id."'>";
 			
 				foreach ( $termchildren as $child ) {
 					$term = get_term_by( 'id', $child, $taxonomy_name );
@@ -243,6 +245,7 @@ $terms_p = get_terms("resolution",$args);
     				$term_link = get_term_link( $term, 'resolution' );
 					?>
 					<li>
+                    	<img width="40" height="27" alt="" id="box_<?php echo $term_id?>" src="<?php echo get_template_directory_uri(); ?>-child/images/arrow.jpg"> 
 						<p><a href="<?php echo $term_link; ?>"><?php echo $term->name; ?></a></p>
 					</li>
 					<?php
@@ -251,6 +254,10 @@ $terms_p = get_terms("resolution",$args);
 				}
 				echo "</ul>";
 			}
+			?>
+            </li>
+			<?php
+			
 							
 		 }
 	 } 

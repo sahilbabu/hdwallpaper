@@ -4,7 +4,7 @@ Tags: social, media, widget, follow, profile, icons, About.me, Behance, Dribbble
 Donate link: https://github.com/dannisbet/social-icons-widget
 Requires at least: 3.5.1
 Tested up to: 3.9
-Stable tag: 14.04
+Stable tag: 14.05
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -53,6 +53,9 @@ Coming soon.
 2. Widget settings via the Appearance > Widgets screen.
 
 == Changelog ==
+
+= 14.05 =
+* Fixed broken image links when WordPress is installed under a directory.
 
 = 14.04 =
 * Added new options for About.me, Email, GitHub, Medium, and WordPress profile links
