@@ -169,7 +169,7 @@ get_header(); ?>
 							   $exclude_ids = $post->ID;	
 							   
 							   $exclude_ids = array( $post->ID);
-$my_query = new WP_Query( array( 'post_type'=>'post','cat'=>$categories[0]->term_id,'showposts'=>9,'orderby'=>'rand', 'post__not_in' => $exclude_ids ) );						   
+$my_query = new WP_Query( array( 'post_type'=>'post','cat'=>$categories[0]->term_id,'showposts'=>6,'orderby'=>'rand', 'post__not_in' => $exclude_ids ) );						   
 								
 								
 								if ( $my_query->have_posts() ) { 
