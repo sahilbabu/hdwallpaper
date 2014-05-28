@@ -210,7 +210,7 @@ get_header();
                 <!-- // fb comments  -->   
 
                 <div class="recentpost clearfix">
-                    <div class="recentpost-product"><a href="#">Facebook Comments</a></div>
+                    <div class="recentpost-product"><a href="#">Facebook Comments</a> <?php the_ID(); ?></div>
                 </div>
                 <div class="recentpostOuter">
                     <div id="fb-root"></div>
