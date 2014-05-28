@@ -1214,12 +1214,12 @@ span.jPag-sprevious, span.jPag-sprevious-img {
     box-sizing: border-box;
     display: block;
     float: left;
-    margin-left: 2.5641%;
     min-height: 30px;
     width: 100%;
 }
 .row-fluid .span3 {
     width: 21.4%;
+    margin-right: 2.5641%;
 }
 .row-fluid .span9 {
     width: 72.6%;
