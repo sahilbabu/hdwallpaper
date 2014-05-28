@@ -145,20 +145,14 @@ get_header();
 
 
                     </div>
-                    <div class="product-main-baner content-area">
-
-
-
+                    <div class="product-main-baner content-area" style="clear: both;">
                         <?php the_content(); ?>
                         <?php //  pvc_stats_update( $post->ID, 1 ); ?> 
                     </div>
                     
                     <div class="recentpost clearfix">
                         <div class="recentpost-product"><a href="#">Related wallpaper</a></div>
-                        
-
                     </div>
-
                     <div class="recentpostOuter">
 
 
