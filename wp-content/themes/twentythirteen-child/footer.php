@@ -81,7 +81,9 @@
         $(".ratio").html('<div class="wide"><p>Aspect Ratio:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+asp_ratio+'</p><p class="none">Resolution :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + width + ' X ' + height + '</p></div>');
         if($('#size_'+ width + ' X ' + height).length > 0) {
             $('#size_'+ width + ' X ' + height).addClass('btn-warning');
+            
         }
+        $('#size_1366X768').addClass('btn-warning');
 
     });
 
