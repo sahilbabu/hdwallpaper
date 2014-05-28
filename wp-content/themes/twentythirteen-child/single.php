@@ -51,8 +51,8 @@ get_header();
 
                             <li class="facebook-disply"><a target="_blank" href="<?php echo site_url('/'); ?>process.php?pid=<?php print urlencode($fb_profile); ?>&action=2">Set as Facebook Display Picture</a></li>
                             <li><a target="_blank" href="<?php echo site_url('/'); ?>process.php?pid=<?php print urlencode($fb_cover); ?>&action=1">Set as Facebook Cover</a></li>
-                            <li><a href="#">Set as Google plus</a></li>
-                            <li><a href="#">Set as Twitter</a></li>
+                            <li><a href="javascript:void(0);">Set as Google plus</a></li>
+                            <li><a href="javascript:void(0);">Set as Twitter</a></li>
                         </ul>
                     </div>
                     <div class="clr"></div>
@@ -151,7 +151,7 @@ get_header();
                     </div>
                     
                     <div class="recentpost clearfix">
-                        <div class="recentpost-product"><a href="#">Related wallpaper</a></div>
+                        <div class="recentpost-product"><a href="javascript:void(0);">Related wallpaper</a></div>
                     </div>
                     <div class="recentpostOuter">
 
@@ -210,7 +210,7 @@ get_header();
                 <!-- // fb comments  -->   
 
                 <div class="recentpost clearfix">
-                    <div class="recentpost-product"><a href="#">Facebook Comments</a> <?php the_ID(); ?></div>
+                    <div class="recentpost-product"><a href="javascript:void(0);">Facebook Comments</a> </div>
                 </div>
                 <div class="recentpostOuter">
 <!--                    <div id="fb-root"></div>
