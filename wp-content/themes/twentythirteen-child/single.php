@@ -58,7 +58,7 @@ get_header(); ?>
                                <div class="clr"></div>
                                <div class="extra-cont">
                                     <div class="row-fluid">
-                                        <div class="span3">HD</div>
+                                        <div class="span3"><h4 class="widgettitle">HD</h4></div>
                                         <div class="span9">
                                             <a href="http://www.wallrgb.com/download.php?download_file=http%3A%2F%2Fwww.wallrgb.com%2Fwp-content%2Fuploads%2F2014%2F05%2Fsky_sun_sea_path_reflection_clouds_ripples_horizon_line_wallpaper_3840x2160.jpg&w=1600&h=1200">1600X1200</a>
                                             <a href="http://www.wallrgb.com/download.php?download_file=http%3A%2F%2Fwww.wallrgb.com%2Fwp-content%2Fuploads%2F2014%2F05%2Fsky_sun_sea_path_reflection_clouds_ripples_horizon_line_wallpaper_3840x2160.jpg&w=3840&h=2160">3840X2160</a>
@@ -75,7 +75,7 @@ get_header(); ?>
                                             <a href="http://www.wallrgb.com/download.php?download_file=http%3A%2F%2Fwww.wallrgb.com%2Fwp-content%2Fuploads%2F2014%2F05%2Fsky_sun_sea_path_reflection_clouds_ripples_horizon_line_wallpaper_3840x2160.jpg&w=960&h=540">960X540</a></div>
                                     </div>
                                     <div class="row-fluid">
-                                        <div class="span3">Wide</div>
+                                        <div class="span3"><h4 class="widgettitle">WIDE</h4></div>
                                         <div class="span9">
                                             <a href="http://www.wallrgb.com/download.php?download_file=http%3A%2F%2Fwww.wallrgb.com%2Fwp-content%2Fuploads%2F2014%2F05%2Fsky_sun_sea_path_reflection_clouds_ripples_horizon_line_wallpaper_3840x2160.jpg&w=1600&h=1200">1600X1200</a>
                                             <a href="http://www.wallrgb.com/download.php?download_file=http%3A%2F%2Fwww.wallrgb.com%2Fwp-content%2Fuploads%2F2014%2F05%2Fsky_sun_sea_path_reflection_clouds_ripples_horizon_line_wallpaper_3840x2160.jpg&w=3840&h=2160">3840X2160</a>
