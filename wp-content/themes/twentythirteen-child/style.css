@@ -1219,10 +1219,10 @@ span.jPag-sprevious, span.jPag-sprevious-img {
     width: 100%;
 }
 .row-fluid .span3 {
-    width: 23.4043%;
+    width: 21.4%;
 }
 .row-fluid .span9 {
-    width: 70.6%;
+    width: 72.6%;
 }
 .row-fluid h4.widgettitle {
     font-size: 12px;
@@ -1242,6 +1242,46 @@ span.jPag-sprevious, span.jPag-sprevious-img {
     background-position: 0 0;
     background-repeat: repeat;
     background-size: auto auto;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+}
+.widgettitle {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #BBBBBB;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    border-left-color-value: #BBBBBB;
+    border-left-style-ltr-source: physical;
+    border-left-style-rtl-source: physical;
+    border-left-style-value: solid;
+    border-left-width-ltr-source: physical;
+    border-left-width-rtl-source: physical;
+    border-left-width-value: 1px;
+    border-right-color-ltr-source: physical;
+    border-right-color-rtl-source: physical;
+    border-right-color-value: #BBBBBB;
+    border-right-style-ltr-source: physical;
+    border-right-style-rtl-source: physical;
+    border-right-style-value: solid;
+    border-right-width-ltr-source: physical;
+    border-right-width-rtl-source: physical;
+    border-top-color: #BBBBBB;
+    border-top-style: solid;
+    border-top-width: 1px;
+    color: #999999;
+    margin-bottom: 15px;
+    position: relative;
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
 }
 
 .btn {
