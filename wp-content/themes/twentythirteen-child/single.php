@@ -216,7 +216,7 @@ get_header();
 <!--                    <div id="fb-root"></div>
                     <script src="http://connect.facebook.net/en_US/all.js#appId=1459918874245839&amp;xfbml=1"></script>
                     <fb:comments xid="<?php // the_ID(); ?>" numposts="10" width="569px" publish_feed="true"></fb:comments>-->
-                    <div class="fb-comments" data-href="http://www.wallrgb.com/girl-on-the-beach-wallpaper/" data-width="572px" data-numposts="10" data-colorscheme="light"></div>
+                    <div class="fb-comments" data-href="<?php echo get_permalink( $post->ID ); ?>" data-width="572px" data-numposts="10" data-colorscheme="light"></div>
                 </div>
                 <!-- // fb comments  -->  
             </div>
