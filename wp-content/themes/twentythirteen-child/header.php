@@ -142,25 +142,6 @@
                 });
 
 
-
-                var res = get_resolution();
-
-                var asp_ratio = res[4];
-
-                var width = res[0];
-
-                var height = res[1];
-
-                $(".ratio").html('<div class="wide"><p>Aspect Ratio:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+asp_ratio+'</p><p class="none">Resolution :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + width + ' X ' + height + '</p></div>');
-
-                if($('#size_'+ width + ' X ' + height).length > 0) {
-                    $('#size_'+ width + ' X ' + height).addClass('btn-warning');
-                }
-
-
-
-
-
                 $(".slider2").slidesjs({
 
                     play: {
@@ -200,86 +181,6 @@
                 });
 
             });
-
-            function gcd(a, b) {
-
-                return (b == 0) ? a : gcd(b, a % b);
-
-            }
-
-
-
-            function get_resolution() {
-
-                var w = screen.width;
-
-                var h = screen.height;
-
-                var r = gcd(w, h);
-
-                var resolution = w / r + ":" + h / r;
-
-                var ratio = (jQuery.browser.mobile) ? 'Mobile' : asp_ratio(resolution);
-
-                var ret = [w, h, r, resolution, ratio];
-
-                return ret;
-
-
-
-            }
-
-
-
-            function asp_ratio(resolution) {
-
-                var ret = '';
-
-                switch (resolution) {
-
-                    case "683:384":
-
-                    case "16:9":
-
-                        ret = 'HD';
-
-                        break;
-
-                    case "16:10":
-
-                    case "5:3":
-
-                        ret = 'Wide';
-
-                        break;
-
-                    case "4:3":
-
-                    case "5:4":
-
-                        ret = 'Standard';
-
-                        break;
-
-                    case "9:16":
-
-                        ret = 'Mobile';
-
-                        break;
-
-                    default:
-
-                        ret = 'Other';
-
-                        break;
-
-                }
-
-                return ret;
-
-            }
-
-
 
         </script>
         <style>
