@@ -150,7 +150,7 @@ get_header();
 
 
                         <?php the_content(); ?>
-                        <?php pvc_stats_update( $post->ID, 1 ); ?> 
+                        <?php //  pvc_stats_update( $post->ID, 1 ); ?> 
                     </div>
                     
                     <div class="recentpost clearfix">
@@ -221,7 +221,7 @@ get_header();
                 <div class="recentpostOuter">
                     <div id="fb-root"></div>
                     <script src="http://connect.facebook.net/en_US/all.js#appId=1459918874245839&amp;xfbml=1"></script>
-                    <fb:comments xid="<?php the_ID(); ?>" numposts="10" width="425" publish_feed="true"></fb:comments>
+                    <fb:comments xid="<?php the_ID(); ?>" numposts="10" width="569" publish_feed="true"></fb:comments>
                 </div>
                 <!-- // fb comments  -->  
             </div>
