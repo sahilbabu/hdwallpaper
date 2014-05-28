@@ -56,17 +56,17 @@
   left: 0 !important;
 }
 
-.ratings .s2 a{left:16px;}
-.ratings .s2 a:hover{width: 32px;}
+.ratings .s2 a{/* left: 16px; */}
+.ratings .s2 a:hover{width: 32px;left: -16px !important;}
 
-.ratings .s3 a{left: 32px;}
-.ratings .s3 a:hover{width: 48px;}
+.ratings .s3 a{/* left: -32px; */}
+.ratings .s3 a:hover{width: 48px;left: -32px !important;}
 
-.ratings .s4 a{left: 48px;}
-.ratings .s4 a:hover{width: 64px;}
+.ratings .s4 a{/* left: 48px; */}
+.ratings .s4 a:hover{width: 64px;left: -48px !important;}
 
-.ratings .s5 a{left: 64px;}
-.ratings .s5 a:hover{width: 80px;}
+.ratings .s5 a{/* left: -64px; */}
+.ratings .s5 a:hover{width: 80px;left: -64px !important;}
 
 .ratings .s6 a{left: 80px;}
 .ratings .s6 a:hover{width: 96px;}

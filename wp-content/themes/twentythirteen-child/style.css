@@ -529,8 +529,8 @@ em {
 }
 .star ul li {
     list-style-type: none;
-    width: 10px;
-    height: 10px;
+    width: 16px;
+    height: 16px;
     float: left;
     border-bottom: none;
 }
