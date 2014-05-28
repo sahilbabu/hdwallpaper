@@ -239,7 +239,7 @@ if (isset($_GET['download_file'])) {
     $file_extension = $info->getExtension();
     $file_basename = $info->getBasename();
     $file_name = $info->getFilename();
-    $Download_Name = rand(0,99999).'_'.time().$file_extension;
+    $Download_Name = rand(99999,9999999).'_'.time().'.'.$file_extension;
 
     $new_file = APPLICATION_PATH . '/temp/wallpaper_' . $download_file_w . '_' . $download_file_h . '.' . $file_extension;
     $new_path = resize_image('max', $download_file, $new_file, $download_file_w, $download_file_h);
