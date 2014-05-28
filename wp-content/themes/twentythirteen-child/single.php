@@ -126,7 +126,7 @@ if (!empty($terms_p) && !is_wp_error($terms_p)) {
 
                                 $dimention = explode("X", $term->name);
                                 ?>
-                                <a id="<?php print trim($term->name); ?>" class="btn" href="<?php echo site_url('/'); ?>download.php?download_file=<?php print urlencode($large_image_full[0]); ?>&w=<?php echo $dimention[0]; ?>&h=<?php echo $dimention[1]; ?>"><?php echo $term->name; ?></a>
+                                <a id="size_<?php print trim($term->name); ?>" class="btn" href="<?php echo site_url('/'); ?>download.php?download_file=<?php print urlencode($large_image_full[0]); ?>&w=<?php echo $dimention[0]; ?>&h=<?php echo $dimention[1]; ?>"><?php echo $term->name; ?></a>
 
                                 <?php
                             }

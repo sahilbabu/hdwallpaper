@@ -1,5 +1,4 @@
 <?php
-
 /**
 
  * The Header template for our theme
@@ -17,7 +16,6 @@
  * @since Twenty Thirteen 1.0
 
  */
-
 ?><!DOCTYPE html>
 
 <!--[if IE 7]>
@@ -86,78 +84,58 @@
 
             jQuery(document).ready(function($) {
 
-			$('.categories ul.category_left_list li')
-			.hide()
-			.filter(':lt(10)')
-			.show();
+                $('.categories ul.category_left_list li')
+                .hide()
+                .filter(':lt(10)')
+                .show();
 		
-			$('.categories ul.category_left_list')
-				.append('<li class="see_more"><img height="27" width="40" alt="" src="<?php echo get_template_directory_uri(); ?>-child/images/3dimg9.jpg"><span>See more</span><span class="less">See less</span></li>')
-				.find('li:last')
-				.click(function(){
-					$(this)
-						.siblings(':gt(1)')
-						.toggle()
-						.end()
-						.find('span')
-						.toggle();
-			});
+                $('.categories ul.category_left_list')
+                .append('<li class="see_more"><img height="27" width="40" alt="" src="<?php echo get_template_directory_uri(); ?>-child/images/3dimg9.jpg"><span>See more</span><span class="less">See less</span></li>')
+                .find('li:last')
+                .click(function(){
+                    $(this)
+                    .siblings(':gt(1)')
+                    .toggle()
+                    .end()
+                    .find('span')
+                    .toggle();
+                });
  			
-			$('#hdwide2 ul li img').each(function(i){
-            var subUl = $(this).parent().find('ul'); //Get the sub ul.
-            $(this).bind('click',function(e){
-                    e.preventDefault(); // Prevent the default action of the link
-                    $('.expanded ul').hide(); // hide all the other ULs
-                    subUl.toggle();
-                }) ;   
-            });
+                $('#hdwide2 ul li img').each(function(i){
+                    var subUl = $(this).parent().find('ul'); //Get the sub ul.
+                    $(this).bind('click',function(e){
+                        e.preventDefault(); // Prevent the default action of the link
+                        $('.expanded ul').hide(); // hide all the other ULs
+                        subUl.toggle();
+                    }) ;   
+                });
+	
 
-                //$('.hdwide ul ul').hide(); 
-/*
-                $('#hdwide2 ul li img').click(function() {
-					
-					
+                $('.resolationbutton a').click(function() {
 
-                    $('#hdwide2 ul ul').hide();
-
-                    var id = $(this).attr('id');
-					alert("#ul_"+id+"");
-
-                    $("#ul_"+id+"").show();
-
-                    
-
-                });*/
-
-				
-
-				
-
-				  $('.resolationbutton a').click(function() {
-
-					   $('.resolationbutton2').removeClass('active');
+                    $('.resolationbutton2').removeClass('active');
 
                     $('.resolationbutton').addClass('active');
 
                     $('#resulotion_l').hide();
 
-					$('#aspact_ration_l').show();
+                    $('#aspact_ration_l').show();
 
                     
 
                 });
 
-				 $('.resolationbutton2 a').click(function() {
+                $('.resolationbutton2 a').click(function() {
 
 					 
 
-					 $('.resolationbutton').removeClass('active');
+                    $('.resolationbutton').removeClass('active');
 
                     $('.resolationbutton2').addClass('active');
 
-				    $('#aspact_ration_l').hide();
+                    $('#aspact_ration_l').hide();
 
-					$('#resulotion_l').show();
+                    $('#resulotion_l').show();
 
                     
 
@@ -175,7 +153,9 @@
 
                 $(".ratio").html('<div class="wide"><p>Aspect Ratio:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+asp_ratio+'</p><p class="none">Resolution :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + width + ' X ' + height + '</p></div>');
 
-
+                if($('#size_'+ width + ' X ' + height).length > 0) {
+                    $('#size_'+ width + ' X ' + height).addClass('btn-warning');
+                }
 
 
 
@@ -303,23 +283,23 @@
 
         </script>
         <style>
-        .less{display:none;}
-		.see_more{ font-size:12px; cursor:pointer;}
-		.see_more span{padding-top: 5px;
-float: left;}
-        </style>
+            .less{display:none;}
+            .see_more{ font-size:12px; cursor:pointer;}
+            .see_more span{padding-top: 5px;
+                           float: left;}
+            </style>
 
-    </head>
-
-
-
-    <body <?php body_class(); ?>>
+        </head>
 
 
 
-        <!-- wrapper start -->
+        <body <?php body_class(); ?>>
 
-        <div id="wrapper">
+
+
+            <!-- wrapper start -->
+
+            <div id="wrapper">
 
             <!--  header start -->
 
@@ -401,33 +381,33 @@ float: left;}
 
                         <div class="googleBanner fRight">
 
-                        
 
-                        <?php if ( is_active_sidebar( 'top-banner-box' ) ) : ?>
 
-                            <ul id="lang-sidebar">
+                            <?php if (is_active_sidebar('top-banner-box')) : ?>
 
-                                <?php dynamic_sidebar( 'top-banner-box' ); ?>
+                                <ul id="lang-sidebar">
 
-                            </ul>
+                                    <?php dynamic_sidebar('top-banner-box'); ?>
 
-                         <?php endif; ?>
+                                </ul>
 
-                        
+                            <?php endif; ?>
 
-                      
+
+
+
+
+                        </div>
+
+
 
                     </div>
 
 
 
+
+
                 </div>
-
-
-
-                
-
-            </div>
 
                 <div class="menuOuter">
 
@@ -442,47 +422,28 @@ float: left;}
 
 
                         <?php
-
                         $defaults = array(
-
                             'theme_location' => '',
-
                             'menu' => 'Header Menu',
-
                             'container' => 'div',
-
                             'container_class' => 'menu clearfix',
-
                             'container_id' => '',
-
                             'menu_class' => '',
-
                             'menu_id' => '',
-
                             'echo' => true,
-
                             'fallback_cb' => 'wp_page_menu',
-
                             'before' => '',
-
                             'after' => '',
-
                             'link_before' => '',
-
                             'link_after' => '',
-
                             'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-
                             'depth' => 0,
-
                             'walker' => ''
-
                         );
 
 
 
                         wp_nav_menu($defaults);
-
                         ?>
 
 
@@ -493,4 +454,4 @@ float: left;}
 
                 </div>
 
-            <!--  header end -->
+                <!--  header end -->
