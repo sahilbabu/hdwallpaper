@@ -1284,6 +1284,12 @@ span.jPag-sprevious, span.jPag-sprevious-img {
     text-transform: uppercase;
 }
 
+.margin-top-border {
+    border-top-color: #BBBBBB;
+    border-top-style: solid;
+    border-top-width: 1px;
+    margin-top: 5px;
+}
 .plainwidget {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
