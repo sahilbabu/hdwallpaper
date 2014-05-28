@@ -150,12 +150,12 @@ get_header();
 
 
                         <?php the_content(); ?>
-
+                        <?php pvc_stats_update( $post->ID, 1 ); ?> 
                     </div>
-
+                    
                     <div class="recentpost clearfix">
                         <div class="recentpost-product"><a href="#">Related wallpaper</a></div>
-
+                        
 
                     </div>
 
