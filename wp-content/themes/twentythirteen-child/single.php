@@ -22,7 +22,7 @@ get_header();
                 ?>
                 <div class="bannerOuter fRight">
                     <div class="breadcrumbs">
-                       <?php  if(function_exists(simple_breadcrumb)) {simple_breadcrumb();}  ?>
+                       <?php if(function_exists('rdfa_breadcrumb')){ rdfa_breadcrumb(); } ?>
                     </div>
                     <div class="recentpost clearfix recentpost-Categories">
                         <div ><a href="#"><?php the_title(); ?></a></div>
