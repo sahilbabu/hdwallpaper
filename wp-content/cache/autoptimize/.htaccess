@@ -13,6 +13,14 @@
         SetOutputFilter DEFLATE
     </FilesMatch>
 </IfModule>
-<Files *.php>
+<IfModule mod_authz_core.c>
+    <Files *.php>
+	Require all granted
+    </Files>
+</IfModule>
+<IfModule !mod_authz_core.c>
+    <Files *.php>
+	Order allow,deny
         Allow from all
-</Files>
+    </Files>
+</IfModule>

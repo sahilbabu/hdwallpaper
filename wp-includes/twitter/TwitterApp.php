@@ -46,22 +46,23 @@ class TwitterApp {
         // default to 0
         $this->state = 0;
         // 2 (authenticated) if the cookies are set
-        if(isset($_COOKIE['access_token'], $_COOKIE['access_token_secret'])) {
-            $this->state = 2;
-        }
+//        if(isset($_COOKIE['access_token'], $_COOKIE['access_token_secret'])) {
+//            $this->state = 2;
+//        }
         // otherwise use value stored in session
-        elseif(isset($_SESSION['authstate'])) {
-            $this->state = (int)$_SESSION['authstate'];
-        }
-        
+//        elseif(isset($_SESSION['authstate'])) {
+//            $this->state = (int)$_SESSION['authstate'];
+//        }
+//        
         // if we are in the process of authentication we continue
-        if($this->state == 1) {
+//        if($this->state == 1) {
+         $this->endSession();
             $this->auth();
-        }
+//        }
         // verify authentication, clearing cookies if it fails
-        elseif($this->state == 2 && !$this->auth()) {
-            $this->endSession();
-        }
+//        elseif($this->state == 2 && !$this->auth()) {
+//            $this->endSession();
+//        }
     }
 
     /**

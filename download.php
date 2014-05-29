@@ -229,7 +229,7 @@ if (isset($_GET['download_file'])) {
     $download_file_w = isset($_GET['w']) ? $_GET['w'] : 569;
     $download_file_h = isset($_GET['h']) ? $_GET['h'] : 303;
 
-    $new_loc_folder = $_SERVER['DOCUMENT_ROOT'] . "/temp/";
+    $new_loc_folder = $_SERVER['DOCUMENT_ROOT'] . "/tmp/";
     $url_path = site_url("/");
     $new_loc = str_replace($url_path, $url_path . $new_loc_folder, $download_file);
 
@@ -241,7 +241,7 @@ if (isset($_GET['download_file'])) {
     $file_name = $info->getFilename();
     $Download_Name = rand(99999,9999999).'_'.time().'.'.$file_extension;
 
-    $new_file = APPLICATION_PATH . '/temp/wallpaper_' . $download_file_w . '_' . $download_file_h . '.' . $file_extension;
+    $new_file = APPLICATION_PATH . '/tmp/wallpaper_' . $download_file_w . '_' . $download_file_h . '.' . $file_extension;
     $new_path = resize_image('max', $download_file, $new_file, $download_file_w, $download_file_h);
     //output_file($new_file, $file_basename, $file_extension);
     output_file($new_file, $Download_Name, $file_extension);
