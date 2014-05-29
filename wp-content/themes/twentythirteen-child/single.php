@@ -21,9 +21,9 @@ get_header();
                 $categories = get_the_category($post->ID);
                 ?>
                 <div class="bannerOuter fRight">
-                    <div id="breadcrumbs">
+                    
                        <?php if(function_exists('rdfa_breadcrumb')){ rdfa_breadcrumb(); } ?>
-                    </div>
+   
                     <div class="recentpost clearfix recentpost-Categories">
                         <div ><a href="#"><?php the_title(); ?></a></div>
 
