@@ -20,8 +20,10 @@ get_header();
             while (have_posts()) : the_post();
                 $categories = get_the_category($post->ID);
                 ?>
-                <div class="breadcrumb"><?php if (function_exists('bread_crumb')) bread_crumb(); ?></div>
                 <div class="bannerOuter fRight">
+                    <div class="breadcrumbs">
+                        <?php if(function_exists('bcn_display')) { bcn_display();   }?>
+                    </div>
                     <div class="recentpost clearfix recentpost-Categories">
                         <div ><a href="#"><?php the_title(); ?></a></div>
 
