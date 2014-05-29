@@ -22,7 +22,7 @@ get_header();
                 ?>
                 <div class="bannerOuter fRight">
                     <div class="breadcrumbs">
-                        <?php if(function_exists('bcn_display')) { bcn_display();   }?>
+                       <?php if (function_exists('breadcrumbs_everywhere')) breadcrumbs_everywhere(); ?>
                     </div>
                     <div class="recentpost clearfix recentpost-Categories">
                         <div ><a href="#"><?php the_title(); ?></a></div>
