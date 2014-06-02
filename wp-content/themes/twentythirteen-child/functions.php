@@ -115,9 +115,8 @@ $log_box_args = array(
          add_image_size( '63x47-thumb', 63, 47 , true);
          add_image_size( 'homepage-thumb', 181, 132, true );
          add_image_size( '55x55-thumb', 55, 55, true );
-         add_image_size( 'slider-thumb', 569, 303, true );
-		 
-	add_image_size( '450x303-thumb', 450, 303, true );
+         add_image_size( 'slider-thumb', 569, 303, true ); 
+	 add_image_size( '450x303-thumb', 450, 303, true );
 	/*	
 	add_image_size( 'category-thumb', 300, 9999 ); 
 	add_image_size( '800x600-thumb', 800, 600 , true );
@@ -132,7 +131,11 @@ $log_box_args = array(
          // facebook cover and profile 180x180
 	add_image_size( '850x315-thumb', 850, 315, true);
 	add_image_size( '230x230-thumb', 230, 230, true);
-	 //(cropped)
+        
+        // twitter cover 
+        add_image_size( '1500x500-thumb', 1500, 500, true);
+	add_image_size( '1920x1080-thumb', 1920, 1080, true);
+
 }
 function wpbeginner_numeric_posts_nav() {
 

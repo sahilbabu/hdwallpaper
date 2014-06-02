@@ -1,0 +1,15 @@
+[31-May-2014 14:52:47 Europe/Berlin] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'SplFileInfo::getSize(): stat failed for http://www.wallrgb.com/wp-content/uploads/2014/05/Royale_Esders_Roadster_type_41_pic1.jpg' in /home/wallrgb/public_html/twitteroauth/check.php:14
+Stack trace:
+#0 /home/wallrgb/public_html/twitteroauth/check.php(14): SplFileInfo->getSize()
+#1 {main}
+  thrown in /home/wallrgb/public_html/twitteroauth/check.php on line 14
+[31-May-2014 14:53:36 Europe/Berlin] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'SplFileInfo::getType(): Lstat failed for http://www.wallrgb.com/wp-content/uploads/2014/05/Royale_Esders_Roadster_type_41_pic1.jpg' in /home/wallrgb/public_html/twitteroauth/check.php:15
+Stack trace:
+#0 /home/wallrgb/public_html/twitteroauth/check.php(15): SplFileInfo->getType()
+#1 {main}
+  thrown in /home/wallrgb/public_html/twitteroauth/check.php on line 15
+[31-May-2014 14:53:39 Europe/Berlin] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'SplFileInfo::getType(): Lstat failed for http://www.wallrgb.com/wp-content/uploads/2014/05/Royale_Esders_Roadster_type_41_pic1.jpg' in /home/wallrgb/public_html/twitteroauth/check.php:15
+Stack trace:
+#0 /home/wallrgb/public_html/twitteroauth/check.php(15): SplFileInfo->getType()
+#1 {main}
+  thrown in /home/wallrgb/public_html/twitteroauth/check.php on line 15

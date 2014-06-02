@@ -27,7 +27,7 @@ $wp_cache_no_cache_for_get = 0; //Added by WP-Cache Manager
 $wp_cache_disable_utf8 = 0; //Added by WP-Cache Manager
 $cache_time_interval = '600'; //Added by WP-Cache Manager
 $cache_schedule_type = 'time'; //Added by WP-Cache Manager
-$cache_page_secret = '2e8350d26e5c2aff324babf4fc35b3ba'; //Added by WP-Cache Manager
+$cache_page_secret = '1f5aa64dc9a7e4c4eb98fcf1ee94e979'; //Added by WP-Cache Manager
 $wp_cache_slash_check = 0; //Added by WP-Cache Manager
 if ( ! defined('WPCACHEHOME') )
 	define( 'WPCACHEHOME', WP_CONTENT_DIR . "/plugins/wp-super-cache/" ); //Added by WP-Cache Manager
