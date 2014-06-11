@@ -13,3 +13,4 @@ Stack trace:
 #0 /home/wallrgb/public_html/twitteroauth/check.php(15): SplFileInfo->getType()
 #1 {main}
   thrown in /home/wallrgb/public_html/twitteroauth/check.php on line 15
+[11-Jun-2014 08:21:19 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/wallrgb/public_html/twitteroauth/index.php on line 14

@@ -21,12 +21,16 @@ get_header();
                 $categories = get_the_category($post->ID);
                 ?>
                 <div class="bannerOuter fRight">
-                    
-                       <?php if(function_exists('rdfa_breadcrumb')){ rdfa_breadcrumb(); } ?>
-   
-                    <div class="recentpost clearfix recentpost-Categories">
-                        <div ><a href="#"><?php the_title(); ?></a></div>
 
+                    <?php
+                    if (function_exists('rdfa_breadcrumb')) {
+                        rdfa_breadcrumb();
+                    }
+                    ?>
+
+                    <div class="recentpost clearfix recentpost-Categories">
+                        <div ><h1><a href="#"><?php the_title(); ?></h1></a></div>
+                        
                     </div>
 
 
@@ -40,9 +44,19 @@ get_header();
                         $fb_profile = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), '230x230-thumb');
                         $fb_profile = realpath(str_replace(get_bloginfo('url'), '.', $fb_profile[0]));
                         $tw = realpath(str_replace(get_bloginfo('url'), '.', $large_image_url[0]));
+                        $current_url = get_permalink($post->ID);
+                        $page_is = base64_encode($current_url);
+                        $tw_cover = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), '1500x500-thumb');
+                        if (!empty($tw_cover)) {
+                            $tw_cover = realpath(str_replace(get_bloginfo('url'), '.', $tw_cover[0]));
+                        }
+                        $tw_back = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), '1920x1080-thumb');
+                        if (!empty($tw_back)) {
+                            $tw_back = realpath(str_replace(get_bloginfo('url'), '.', $tw_back[0]));
+                        }
                         ?>
 
-        <!--<a href="<?php echo $large_image_url[0]; ?>&w=569&h=303"><button>Download <?php the_title(); ?></button></a>-->
+                    <!--<a href="<?php echo $large_image_url[0]; ?>&w=569&h=303"><button>Download <?php the_title(); ?></button></a>-->
                         <a href="<?php echo site_url('/'); ?>download.php?download_file=<?php print urlencode($large_image_url[0]); ?>&w=800&h=600"><button>Download <?php the_title(); ?></button></a>
 
                         <form id="download_photo" name="download_photo" method="post" enctype="multipart/form-data">
@@ -54,8 +68,13 @@ get_header();
 
                             <li class="facebook-disply"><a target="_blank" href="<?php echo site_url('/'); ?>process.php?pid=<?php print urlencode($fb_profile); ?>&action=2">Set as Facebook Display Picture</a></li>
                             <li><a target="_blank" href="<?php echo site_url('/'); ?>process.php?pid=<?php print urlencode($fb_cover); ?>&action=1">Set as Facebook Cover</a></li>
-                            <li><a href="javascript:void(0);">Set as Google plus</a></li>
-                            <li><a href="javascript:void(0);">Set as Twitter</a></li>
+                            <?php if (!empty($tw_cover)) { ?>
+                                <li><a href="<?php echo site_url('/'); ?>twitteroauth/index.php?action=1&p=<?php print urlencode($page_is); ?>&cover=<?php print urlencode($tw_cover); ?>">Set As Your Twitter Cover</a></li>
+                            <?php } if (!empty($tw_back)) { ?>
+                                <li><a href="<?php echo site_url('/'); ?>twitteroauth/index.php?action=2&p=<?php print urlencode($page_is); ?>&back=<?php print urlencode($tw_back); ?>">Set As Your Twitter Background</a></li>
+                            <?php } if (!empty($tw_cover) && !empty($tw_back)) { ?>
+                                <li><a href="<?php echo site_url('/'); ?>twitteroauth/index.php?action=3&p=<?php print urlencode($page_is); ?>&back=<?php print urlencode($tw_back); ?>&cover=<?php print urlencode($tw_cover); ?>">Set As Both Twitter Cover and Background</a></li>
+                            <?php } ?>
                         </ul>
                     </div>
                     <div class="clr"></div>
@@ -150,9 +169,9 @@ get_header();
                     </div>
                     <div class="product-main-baner content-area" style="clear: both;">
                         <?php the_content(); ?>
-                        <?php //  pvc_stats_update( $post->ID, 1 ); ?> 
+                        <?php //  pvc_stats_update( $post->ID, 1 );  ?> 
                     </div>
-                    
+
                     <div class="recentpost clearfix">
                         <div class="recentpost-product"><a href="javascript:void(0);">Related wallpaper</a></div>
                     </div>
@@ -216,10 +235,10 @@ get_header();
                     <div class="recentpost-product"><a href="javascript:void(0);">Facebook Comments</a> </div>
                 </div>
                 <div class="recentpostOuter">
-<!--                    <div id="fb-root"></div>
-                    <script src="http://connect.facebook.net/en_US/all.js#appId=1459918874245839&amp;xfbml=1"></script>
-                    <fb:comments xid="<?php // the_ID(); ?>" numposts="10" width="569px" publish_feed="true"></fb:comments>-->
-                    <div class="fb-comments" data-href="<?php echo get_permalink( $post->ID ); ?>" data-width="572px" data-numposts="10" data-colorscheme="light"></div>
+                    <!--                    <div id="fb-root"></div>
+                                        <script src="http://connect.facebook.net/en_US/all.js#appId=1459918874245839&amp;xfbml=1"></script>
+                                        <fb:comments xid="<?php // the_ID();    ?>" numposts="10" width="569px" publish_feed="true"></fb:comments>-->
+                    <div class="fb-comments" data-href="<?php echo get_permalink($post->ID); ?>" data-width="572px" data-numposts="10" data-colorscheme="light"></div>
                 </div>
                 <!-- // fb comments  -->  
             </div>
