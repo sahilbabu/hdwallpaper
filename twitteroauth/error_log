@@ -14,3 +14,10 @@ Stack trace:
 #1 {main}
   thrown in /home/wallrgb/public_html/twitteroauth/check.php on line 15
 [11-Jun-2014 08:21:19 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/wallrgb/public_html/twitteroauth/index.php on line 14
+[11-Jun-2014 14:03:33 Europe/Berlin] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 23946780 bytes) in /home/wallrgb/public_html/twitteroauth/twitteroauth/OAuth.php on line 728
+[11-Jun-2014 14:34:47 Europe/Berlin] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 23946780 bytes) in /home/wallrgb/public_html/twitteroauth/twitteroauth/OAuth.php on line 728
+[11-Jun-2014 14:44:42 Europe/Berlin] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 23946780 bytes) in /home/wallrgb/public_html/twitteroauth/twitteroauth/OAuth.php on line 728
+[11-Jun-2014 14:48:47 Europe/Berlin] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 22291622 bytes) in /home/wallrgb/public_html/twitteroauth/twitteroauth/OAuth.php on line 728
+[22-Jun-2014 00:52:59 Europe/Berlin] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 22867256 bytes) in /home/wallrgb/public_html/twitteroauth/twitteroauth/OAuth.php on line 728
+[22-Jun-2014 00:53:05 Europe/Berlin] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 22867270 bytes) in /home/wallrgb/public_html/twitteroauth/twitteroauth/OAuth.php on line 728
+[22-Jun-2014 00:54:42 Europe/Berlin] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 22867270 bytes) in /home/wallrgb/public_html/twitteroauth/twitteroauth/OAuth.php on line 728

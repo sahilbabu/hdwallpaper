@@ -1,11 +1,10 @@
  /**
- * jQuery jPages Custom Script v0.5
+ * jQuery jPages Custom Script v0.1
  * Client side pagination with jQuery
  *
  *
  */
 jQuery(document).ready(function() {
-
     jQuery(".gallery").each(function(){
 
         jQuery( "<div class='gallery-holder clear'>" ).insertBefore( ".gallery" );
@@ -16,8 +15,7 @@ jQuery(document).ready(function() {
         jQuery( ".gallery br" ).remove(); // remove br tag from Gallery
 
         jQuery("div.gallery-holder").jPages({
-                containerID: id,
-        perPage : jPages_count.get_default_gallery_per_page
+                containerID: id
         });
 
 
@@ -33,7 +31,7 @@ jQuery(document).ready(function() {
     jQuery( "<div class='comment-list-holder clear'>" ).insertAfter( "#comment-list" );
     jQuery("div.comment-list-holder").jPages({
             containerID : "comment-list",
-            perPage : jPages_count.get_comment_pages_count
+            perPage : jPages_comment.get_comment_pages_count
     });
 
     /**

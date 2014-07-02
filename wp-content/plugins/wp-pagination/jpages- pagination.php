@@ -2,7 +2,7 @@
 /*
 Plugin Name: Wp Pagination
 Plugin URI: http://wordpress.org/extend/plugins/wp-pagination/
-Version: 1.5
+Version: 1.6
 Description: Add jQuery pagination for gallery, comments etc.
 Author: Kishore
 Author URI: http://blog.kishorechandra.co.in/

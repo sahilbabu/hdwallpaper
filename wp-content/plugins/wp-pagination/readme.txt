@@ -4,7 +4,7 @@ Donate link: http://blog.kishorechandra.co.in/
 Tags: comments, gallery, pagination, jpages, jquery pagination
 Requires at least: 3.0.1
 Tested up to: 3.9.1
-Stable tag: 1.5
+Stable tag: 1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -71,6 +71,9 @@ BUT DO NOT CHECK THE CHECK BOX FOR Break Comments into page CHECK BOX.
 
 == Changelog ==
 
+= 1.6 =
+* Fixed the range.end bug for images per page in Gallery
+
 = 1.5 =
 * Added option to choose images per page in Gallery
 
@@ -95,6 +98,9 @@ BUT DO NOT CHECK THE CHECK BOX FOR Break Comments into page CHECK BOX.
 * Included the jpages js for gallery only.
 
 == Upgrade Notice ==
+
+= 1.6 =
+* Fixed the range.end bug for images per page in Gallery
 
 = 1.5 =
 * Added option to choose images per page in Gallery

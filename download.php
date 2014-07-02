@@ -1,5 +1,5 @@
 <?php
-
+ini_set('gd.jpeg_ignore_warning', true);
 require_once( dirname(__FILE__) . '/wp-load.php' );
 // place this code inside a php file and call it f.e. "download.php"
 define('APPLICATION_PATH', dirname(__FILE__));
@@ -84,6 +84,7 @@ function resize_image_crop($image, $width, $height) {
 }
 
 function resize_image_force($image, $width, $height) {
+    ini_set("gd.jpeg_ignore_warning", 1);
     $w = @imagesx($image); //current width
     $h = @imagesy($image); //current height
     if ((!$w) || (!$h)) {
@@ -101,6 +102,7 @@ function resize_image_force($image, $width, $height) {
 }
 
 function resize_image($method, $image_loc, $new_loc, $width, $height) {
+  
     if (!is_array(@$GLOBALS['errors'])) {
         $GLOBALS['errors'] = array();
     }
@@ -145,7 +147,6 @@ function resize_image($method, $image_loc, $new_loc, $width, $height) {
         echo_errors();
         return false;
     }
-
     if (in_array($extension, array('.jpg', '.jpeg'))) {
         $image = @imagecreatefromjpeg($image_loc);
     } elseif ($extension == '.png') {

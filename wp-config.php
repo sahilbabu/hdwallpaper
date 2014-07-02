@@ -26,7 +26,7 @@ define('DB_USER', 'wallrgb');
 
 
 /** MySQL database password */
-define('DB_PASSWORD', '8ei=P=s&qRbf');
+define('DB_PASSWORD', 'f7c*?nDh4SPw');
 
 
 /** MySQL hostname */
