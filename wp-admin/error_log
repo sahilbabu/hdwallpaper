@@ -466,3 +466,34 @@
 [02-Jun-2014 15:14:31 UTC] WordPress database error Duplicate entry '3137-1535' for key 'PRIMARY' for query INSERT INTO `wp_a1b2c3456_term_relationships` (`object_id`,`term_taxonomy_id`) VALUES (3137,1535) made by edit_post, wp_update_post, wp_insert_post, do_action('save_post'), call_user_func_array, dwallpaper_project_updated_set_term, wp_set_post_terms, wp_set_object_terms
 [02-Jun-2014 15:14:31 UTC] WordPress database error Duplicate entry '3137-1536' for key 'PRIMARY' for query INSERT INTO `wp_a1b2c3456_term_relationships` (`object_id`,`term_taxonomy_id`) VALUES (3137,1536) made by do_action('wp_ajax_autosave'), call_user_func_array, wp_ajax_autosave, edit_post, wp_update_post, wp_insert_post, do_action('save_post'), call_user_func_array, dwallpaper_project_updated_set_term, wp_set_post_terms, wp_set_object_terms
 [02-Jun-2014 15:14:31 UTC] WordPress database error Duplicate entry '3137-19' for key 'PRIMARY' for query INSERT INTO `wp_a1b2c3456_term_relationships` (`object_id`,`term_taxonomy_id`) VALUES (3137,19) made by edit_post, wp_update_post, wp_insert_post, do_action('save_post'), call_user_func_array, dwallpaper_project_updated_set_term, wp_set_post_terms, wp_set_object_terms
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Parameter 1 to determine_if_fourzerofour() expected to be a reference, value given in /home/wallrgb/public_html/wp-includes/plugin.php on line 470
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'b' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'b' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'br' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'meta' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'link' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'link' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'link' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'link' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'link' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'link' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'link' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'link' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'link' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'link' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'link' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'link' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'link' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'link' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'link' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'script' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'script' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'script' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'link' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'link' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'meta' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'link' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'style' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'style' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'style' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266
+[05-Jul-2014 16:25:59 UTC] PHP Warning:  Illegal string offset 'style' in /home/wallrgb/public_html/wp-content/plugins/all-in-one-seo-pack/aioseop_module_class.php on line 266

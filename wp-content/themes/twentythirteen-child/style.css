@@ -616,7 +616,7 @@ em {
     margin-left: 0px;
 }
 .chrismisBox img {
-    margin-bottom: 10px;
+/*    margin-bottom: 10px;*/
 }
 .chrismisBox h5 {
     font-size: 12px;
@@ -1430,3 +1430,28 @@ button, input, textarea, select, a, a:focus {
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
+/*Loading animation */
+.less{display:none;}
+.see_more{ font-size:12px; cursor:pointer;}
+.see_more span{padding-top: 5px; float: left;}
+html {
+    -webkit-transition: background-color 1s;
+    transition: background-color 1s;
+}
+html, body { min-height: 100%; }
+html.loading {
+    background: #333 url('images/ajax-loader.gif') no-repeat 50% 50%;
+    -webkit-transition: background-color 0;
+    transition: background-color 0;
+    background-attachment:fixed;
+    background-position:center; 
+}
+body {
+    -webkit-transition: opacity 1s ease-in;
+    transition: opacity 1s ease-in;
+}
+html.loading body {
+    opacity: 0;
+    -webkit-transition: opacity 0;
+    transition: opacity 0;
+}

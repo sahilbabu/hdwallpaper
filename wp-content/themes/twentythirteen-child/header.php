@@ -32,22 +32,14 @@
 
 <!--[if !(IE 7) | !(IE 8)  ]><!-->
 
-<html <?php language_attributes(); ?>>
-
+<html class="loading" <?php language_attributes(); ?>>
     <!--<![endif]-->
-
     <head>
-
         <meta charset="<?php bloginfo('charset'); ?>">
-
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
-
         <title><?php wp_title('|', true, 'right'); ?></title>
-
         <link rel="profile" href="http://gmpg.org/xfn/11">
-
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
         <!--[if lt IE 9]>
@@ -59,25 +51,15 @@
         <?php wp_head(); ?>
 
         <link href="<?php echo get_template_directory_uri(); ?>-child/css/style-pegination.css" rel="stylesheet" type="text/css" />
-
         <link href="<?php echo get_template_directory_uri(); ?>-child/css/responsive.css" rel="stylesheet" type="text/css" />		
 
         <!-- bxSlider CSS file -->
-
-
-
         <script src="<?php echo get_template_directory_uri(); ?>-child/jquery.paginate.js" type="text/javascript"></script>
-
         <script src="<?php echo get_template_directory_uri(); ?>-child/js/responsive.js" type="text/javascript"></script>
-
         <script src="<?php echo get_template_directory_uri(); ?>-child/js/slider.js" type="text/javascript"></script>
-
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
-
         <link type="text/css" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/themes/ui-lightness/jquery-ui.css">
-
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>-child/jquery.fileDownload-master/src/Scripts/jquery.fileDownload.js"></script>
-
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>-child/js/detectmobilebrowser.js"></script>
 
         <script>
@@ -85,122 +67,99 @@
             jQuery(document).ready(function($) {
 
                 $('.categories ul.category_left_list li')
-                .hide()
-                .filter(':lt(10)')
-                .show();
-		
+                        .hide()
+                        .filter(':lt(10)')
+                        .show();
+
                 $('.categories ul.category_left_list')
-                .append('<li class="see_more"><img height="27" width="40" alt="" src="<?php echo get_template_directory_uri(); ?>-child/images/3dimg9.jpg"><span>See more</span><span class="less">See less</span></li>')
-                .find('li:last')
-                .click(function(){
-                    $(this)
-                    .siblings(':gt(1)')
-                    .toggle()
-                    .end()
-                    .find('span')
-                    .toggle();
-                });
- 			
-                $('#hdwide2 ul li img').each(function(i){
+                        .append('<li class="see_more"><img height="27" width="40" alt="" src="<?php echo get_template_directory_uri(); ?>-child/images/3dimg9.jpg"><span>See more</span><span class="less">See less</span></li>')
+                        .find('li:last')
+                        .click(function() {
+                            $(this)
+                                    .siblings(':gt(1)')
+                                    .toggle()
+                                    .end()
+                                    .find('span')
+                                    .toggle();
+                        });
+
+                $('#hdwide2 ul li img').each(function(i) {
                     var subUl = $(this).parent().find('ul'); //Get the sub ul.
-                    $(this).bind('click',function(e){
+                    $(this).bind('click', function(e) {
                         e.preventDefault(); // Prevent the default action of the link
                         $('.expanded ul').hide(); // hide all the other ULs
                         subUl.toggle();
-                    }) ;   
+                    });
                 });
-	
+
 
                 $('.resolationbutton a').click(function() {
-
                     $('.resolationbutton2').removeClass('active');
-
                     $('.resolationbutton').addClass('active');
-
                     $('#resulotion_l').hide();
-
                     $('#aspact_ration_l').show();
-
-                    
-
                 });
 
                 $('.resolationbutton2 a').click(function() {
-
-					 
-
                     $('.resolationbutton').removeClass('active');
-
                     $('.resolationbutton2').addClass('active');
-
                     $('#aspact_ration_l').hide();
-
                     $('#resulotion_l').show();
 
-                    
 
                 });
 
 
                 $(".slider2").slidesjs({
-
                     play: {
-
                         active: true,
-
                         // [boolean] Generate the play and stop buttons.
-
                         // You cannot use your own buttons. Sorry.
-
                         effect: "slide",
-
                         // [string] Can be either "slide" or "fade".
-
                         interval: 5000,
-
                         // [number] Time spent on each slide in milliseconds.
-
                         auto: true,
-
                         // [boolean] Start playing the slideshow on load.
-
                         swap: false,
-
                         // [boolean] show/hide stop and play buttons
-
                         pauseOnHover: false,
-
                         // [boolean] pause a playing slideshow on hover
-
                         restartDelay: 2500
-
-                        // [number] restart delay on inactive slideshow
-
+                                // [number] restart delay on inactive slideshow
                     }
 
                 });
 
             });
+            $(window).load(function() {
+                var html = document.getElementsByTagName('html')[0];
+                setTimeout(function() {
+                    html.className = html.className.replace(/loading/, '');
+                }, 1000);
+            });
 
         </script>
-        <style>
-            .less{display:none;}
-            .see_more{ font-size:12px; cursor:pointer;}
-            .see_more span{padding-top: 5px;
-                           float: left;}
-            </style>
 
-        </head>
+        <!-- image style  -->
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>-child/css/sass-compiled.css" />
 
+        <!-- Modrnizr Lib -->
+        <script src="<?php echo get_template_directory_uri(); ?>-child/libs/modernizr.js" type="text/javascript"></script>
+        <!-- image style  -->
 
-
-        <body <?php body_class(); ?>>
+    </head>
 
 
 
-            <!-- wrapper start -->
+    <body <?php body_class(); ?>>
 
-            <div id="wrapper">
+
+
+        <!-- wrapper start -->
+
+        <div id="wrapper">
 
             <!--  header start -->
 
